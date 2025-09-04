@@ -48,9 +48,9 @@ def create_access_token(response : Response,email : str, id : int):
     response.set_cookie(
         key="access_token",
         value=token,
-        secure=False,
+        secure=True,
         httponly=True,
-        samesite="lax",
+        samesite="none",
         max_age= 60*60*24
     )
     
